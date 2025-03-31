@@ -21,7 +21,7 @@ export function Management() {
             <PreviewDisplay 
             header = "careers"
             paragraph = "Opportunity drives us. Higher is our aim. We’re determined to live well."
-            backgroundImage = "/images/mgmt-img.png"
+            backgroundImage = "/images/p-display-img2.png"
             />
 
             <Footer />

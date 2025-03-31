@@ -52,7 +52,7 @@ export function Portfolio() {
                     <div className='mini-nav'>
                         <div className='ap-h-wrapper'>
                             <h2 className='ap-h'>All Properties</h2>
-                            <span className='ap-counter'>[{count}]</span> {/* Display count */}
+                            <span className='ap-counter'>[{count}]</span>
                         </div>
                         <div className='mini-nav-items'>
                             <button className='mini-nav-btn overline-sm-medium'>all</button>

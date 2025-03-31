@@ -1564,6 +1564,390 @@ button {
   right: 0;
 }
 
+.c-card-img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -100;
+  left: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.2s ease-in-out;
+  z-index: 1;
+}
+
+.card:hover .c-card-img {
+  transform: scale(1.05);
+}
+
+.c-card-img::after {
+  content: '';
+  position: absolute;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.85));
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+  background-color: rgb(238, 236, 233);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; 
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  border-bottom: 1px solid #D9D5D0;
+  z-index: 2;
+}
+
+.modal-header-left,
+.modal-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.linkedin-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #D9D5D0;
+  border-radius: 50%;
+  font-family: "CentraNo2-Medium";
+  font-size: 16px;
+  color: #181A1C;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.linkedin-link:hover {
+  background-color: white;
+}
+
+.modal-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.modal-header-text span:first-child {
+  color: #595755;
+  text-transform: uppercase;
+}
+
+.ap-btn-left,
+.ap-btn-right {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px;
+  transition: background-color 0.3s ease;
+  border: 1px solid #D9D5D0;
+}
+
+.ap-btn-left {
+  background-image: url('/images/ap-left.png');
+}
+
+.ap-btn-right {
+  background-image: url('/images/ap-left.png');
+  transform: scaleX(-1);
+}
+
+.ap-btn-left:hover,
+.ap-btn-right:hover {
+  background-color: white;
+}
+
+
+.modal-btn {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1000000;
+}
+
+.modal-btn:hover {
+  cursor: pointer;
+}
+
+.modal-content {
+  display: flex;
+  gap: 64px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  height: 100%;
+  width: 100%;
+}
+
+.modal-image-container {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.modal-image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.modal-inner-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.modal-inner-top h1 {
+  margin: 0;
+}
+
+.modal-inner-text {
+  flex: 0 0 45%;
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-hr {
+  height: 1px;
+  background-color: #D9D5D0;
+  margin: 24px 0;
+  width: 100%;
+}
+
+.modal-p {
+  margin-bottom: 24px;
+  color: #595755;
+}
+
+.modal-close-btn {
+  font-family: "CentraNo2-Medium";
+  font-size: 14px;
+  color: #181A1C;
+  position: relative;
+  padding: 8px 16px;
+  transition: opacity 0.3s ease;
+}
+
+.modal-close-btn:hover {
+  opacity: 0.7;
+}
+
+/* Add these styles to your App.css file - you can place them at the end */
+
+/* Container for the entire carousel area */
+.modal-carousel-container {
+  width: 100%;
+  height: calc(100vh - 96px); /* Subtract header height */
+  overflow: hidden;
+  position: relative;
+}
+
+/* Track that moves when sliding/swiping */
+.modal-carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+
+/* Each slide in the carousel */
+.modal-slide {
+  min-width: 90%; /* Takes 90% of viewport width, allowing next slide to peek */
+  height: 100%;
+  flex-shrink: 0;
+  padding-right: 5%;
+}
+
+/* Update existing modal-content class */
+.modal-content {
+  display: flex;
+  gap: 64px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Improved styles for navigation buttons */
+.ap-btn-left,
+.ap-btn-right {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px;
+  transition: background-color 0.3s ease;
+  border: 1px solid #D9D5D0;
+  z-index: 10; /* Ensure buttons are above other elements */
+  position: relative; /* Ensure z-index works */
+}
+
+.ap-btn-left {
+  background-image: url('/images/ap-left.png');
+}
+
+.ap-btn-right {
+  background-image: url('/images/ap-left.png');
+  transform: scaleX(-1);
+}
+
+.ap-btn-left:hover,
+.ap-btn-right:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Make sure the touch/click events don't interfere with button clicks */
+.modal-header button {
+  pointer-events: auto; /* Ensure buttons receive click events */
+}
+
+/* Add visual indicator for dragging */
+.modal-carousel-track.dragging {
+  cursor: grabbing;
+}
+
+/* Ensure modal wrapper takes full viewport */
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+  background-color: rgb(238, 236, 233);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Modal header styles */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  border-bottom: 1px solid #D9D5D0;
+  z-index: 2;
+  height: 96px; /* Fixed height for header */
+  box-sizing: border-box;
+}
+
+.modal-header-left,
+.modal-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.modal-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.modal-close-btn {
+  font-family: "CentraNo2-Medium";
+  font-size: 14px;
+  color: #181A1C;
+  position: relative;
+  padding: 8px 16px;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.modal-close-btn:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/* LinkedIn button style */
+.linkedin-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #D9D5D0;
+  border-radius: 50%;
+  font-family: "CentraNo2-Medium";
+  font-size: 16px;
+  color: #181A1C;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.linkedin-link:hover {
+  background-color: white;
+}
+
+/* Modal content areas */
+.modal-image-container {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.modal-image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.modal-inner-text {
+  flex: 0 0 45%;
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-inner-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.modal-hr {
+  height: 1px;
+  background-color: #D9D5D0;
+  margin: 24px 0;
+  width: 100%;
+}
+
+.modal-p {
+  margin-bottom: 24px;
+  color: #595755;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -1572,9 +1956,7 @@ button {
   width: 100%;
   height: 599px;
   position: relative;
-  background-size: cover;
-  background-position: top, center;
-  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .card::after {
@@ -1866,24 +2248,12 @@ button {
   justify-content: end;
   padding: 25px;
   box-sizing: border-box;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: transform .2s;
-  width: 100%;
+  height: auto;
   aspect-ratio: 8 / 9;
+  overflow: hidden;
 }
 
 
-.gallery-card-wrapper::after {
-  content: '';
-  position: absolute;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.85));
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
 
 .gallery-link {
   position: absolute;
@@ -1903,9 +2273,6 @@ button {
 
 }
 
-.card-thumb {
-
-}
 
 .gallery-grid-wrapper {
   position: relative;
@@ -1915,6 +2282,32 @@ button {
   display: grid;
   grid-template-columns: repeat(6,1fr);
   grid-gap: 48px;
+}
+
+.g-card-img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -100;
+  left: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.2s ease-in-out;
+}
+
+.g-card-img::after {
+  content: '';
+  position: absolute;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.85));
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.gallery-card-wrapper:hover .g-card-img {
+  transform: scale(1.05);
 }
 
 .gallery-card-wrapper {
@@ -2017,11 +2410,11 @@ button {
 }
 
 .ap-mid-btn.active {
-  background-color: #F8F8F7;
+  background-color: white;
 }
 
 .ap-mid-btn:hover {
-  background-color: #c9c9c9;
+  background-color: white;
 }
 
 .ap-btn-right {
@@ -2033,7 +2426,7 @@ button {
 }
 
 .ap-btn-right:hover, .ap-btn-left:hover {
-  background-color: #c9c9c9;
+  background-color: white;
 }
 
 .ap-btn-right, .ap-btn-left {
@@ -2570,6 +2963,9 @@ label {
   bottom: 0.01px;
   
 }
+
+
+
 
 
 

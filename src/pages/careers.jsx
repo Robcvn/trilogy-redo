@@ -50,7 +50,7 @@ export function Careers() {
             <PreviewDisplay
             header = 'CAREERS'
             paragraph = 'We shape environments into prosperous, thriving communities. Join us.'
-            backgroundImage = '/images/careers-img.png'
+            backgroundImage = '/images/p-display-img2.png'
             />
             <Footer />
 

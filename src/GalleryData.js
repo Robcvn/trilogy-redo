@@ -1,6 +1,6 @@
 export default [
     {
-        img: "/images/propimg.jpg",
+        img: "/images/optima.png",
         name: "Optima Old Orchard Woods",
         address: "9739 Woods Drive",
         city: "Skokie, IL"

@@ -4,8 +4,9 @@ import GalleryData from "../GalleryData";
 
 export default function GalleryCard(props) {
     return(
-        <div className="gallery-card-wrapper card-thumb" style={{ backgroundImage: `url(${props.img})`}}>
+        <div className="gallery-card-wrapper">
             <a href="#" className="gallery-link"></a>
+            <div className="g-card-img" style={{ backgroundImage: `url(${props.img})`}}></div>
             <div className="gallery-card-content">
                 <div className="gallery-inner">
                     <h4 className="gallery-h">{props.data.name}</h4>
