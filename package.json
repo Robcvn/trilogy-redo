@@ -1,7 +1,7 @@
 {
   "homepage": "https://robcvn.github.io/trilogy-redo/",
   "name": "trilogy-redo",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
