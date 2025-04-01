@@ -51,22 +51,22 @@ a {
 
 @font-face {
   font-family: "CentraNo2-Medium";
-  src: url("src/Fonts/CentraNo2/CentraNo2-Medium.woff");
+  src: url("./Fonts/CentraNo2/CentraNo2-Medium.woff");
 }
 
 @font-face {
   font-family: "CentraNo2-Book";
-  src: url("src/Fonts/CentraNo2/CentraNo2-Book.woff");
+  src: url("./Fonts/CentraNo2/CentraNo2-Book.woff");
 }
 
 @font-face {
   font-family: "IvyMode";
-  src: url("src/Fonts/IvyMode/WOFF2/IvyMode-Regular_unobfuscated_LKfaPEX.woff2");
+  src: url("./Fonts/IvyMode/WOFF2/IvyMode-Regular_unobfuscated_LKfaPEX.woff2");
 }
 
 @font-face {
   font-family: 'IvyMode-Light';
-  src: url('src/Fonts/IvyMode/OTF/IvyMode-Light.otf');
+  src: url('./Fonts/IvyMode/OTF/IvyMode-Light.otf');
 }
 
 .heading-5xl-book {

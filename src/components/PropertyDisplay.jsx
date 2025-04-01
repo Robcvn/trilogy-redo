@@ -1,5 +1,7 @@
 import React from "react";
 
+const basePath = import.meta.env.BASE_URL;
+
 export default function PropertyDisplay(){
     return(
         <div className="p-display-wrapper">
@@ -15,20 +17,20 @@ export default function PropertyDisplay(){
                     <div className="p-buttons">
                         <a href="#" className="view-prop-link">VIEW PROPERTY</a>
                         <div className="p-display-btn-container">
-                            <button className="left-arrow"><img className="left-arrow" src="\images\arrow-left.svg" alt="" /></button>
+                            <button className="left-arrow"><img className="left-arrow" src={`${basePath}/images/arrow-left.svg`} alt="" /></button>
                             <div className="btn-text-container">
                                 <span className="btn-text">1</span>
                                 <span className="btn-text">/</span>
                                 <span className="btn-text">5</span>
                             </div>
-                            <button className="right-arrow"><img className="right-arrow" src="\images\arrow-right.svg" alt="" /></button>
+                            <button className="right-arrow"><img className="right-arrow" src={`${basePath}/images/arrow-right.svg`} alt="" /></button>
                         </div>
                     </div>
                     <div className="p-buttons-mobile">
                         <a href="#" className="view-prop-link-mobile">VIEW PROPERTY</a>
                         <div className="p-display-btn-container">
-                            <button className="left-arrow"><img className="left-arrow" src="\images\arrow-left.svg" alt="" /></button>
-                            <button className="right-arrow"><img className="right-arrow" src="\images\arrow-right.svg" alt="" /></button>
+                            <button className="left-arrow"><img className="left-arrow" src={`${basePath}/images/arrow-left.svg`} alt="" /></button>
+                            <button className="right-arrow"><img className="right-arrow" src={`${basePath}/images/arrow-right.svg`} alt="" /></button>
                         </div>
                     </div>
                 </div>

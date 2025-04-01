@@ -2,7 +2,7 @@ import React from "react";
 import PreviewDisplay from "../components/PreviewDisplay";
 import Footer from "../components/Footer";
 
-
+const basePath = import.meta.env.BASE_URL;
 
 export function Management() {
     return(
@@ -21,7 +21,7 @@ export function Management() {
             <PreviewDisplay 
             header = "careers"
             paragraph = "Opportunity drives us. Higher is our aim. We’re determined to live well."
-            backgroundImage = "/images/p-display-img2.png"
+            backgroundImage = {`${basePath}/images/p-display-img2.png`}
             />
 
             <Footer />

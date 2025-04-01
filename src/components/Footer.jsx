@@ -1,11 +1,13 @@
 import React from "react";
 
+const basePath = import.meta.env.BASE_URL;
+
 export default function Footer() {
     return(
         <div className="footer-wrapper">
             <div className="footer-bg"></div>
             <div className="footer-container u-container">
-                <div className="footer-logo"><a href="#"><img className="logo-white" src="\images\logo-white.svg" alt="trilogy logo in white" /></a></div>
+                <div className="footer-logo"><a href="#"><img className="logo-white" src={`${basePath}/images/logo-white.svg`}  alt="trilogy logo in white" /></a></div>
                 <div className="footer-mid f-grid">                                       
                     <div className="f-contact contact-grid">
                         <div className="f-address">
@@ -56,9 +58,9 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="sub-footer-right">
-                    <img src="\images\aamc.png" alt="aamc logo"/>
-                    <img src="\images\house.png" alt="small image of house"/>
-                    <img src="\images\handi.png" alt="handicap symbol"/>
+                    <img src={`${basePath}/images/aamc.png`} alt="aamc logo"/>
+                    <img src={`${basePath}/images/house.png`} alt="small image of house"/>
+                    <img src={`${basePath}/images/handi.png`} alt="handicap symbol"/>
                 </div>
             </div>       
         </div>

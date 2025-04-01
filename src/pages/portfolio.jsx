@@ -9,6 +9,8 @@ import investBuilding from '/images/investmentsbuilding.png';
 import GalleryCardGrid from '../components/GalleryCardGrid';
 import GalleryData from '../GalleryData';
 
+const basePath = import.meta.env.BASE_URL;
+
 export function Portfolio() {
     const [count, setCount] = useState(0); 
 
@@ -22,7 +24,7 @@ export function Portfolio() {
             <div className="port-content u-container p-grid">
                 <div className="h-links h-fp">
                     <div className="feat-prop">
-                        <a href="#"><img src="\images\arrow-long-down.svg" className="arrow-down" alt="gold arrow pointing down" /></a>
+                        <a href="#"><img src={`${basePath}/images/arrow-long-down.svg`} className="arrow-down" alt="gold arrow pointing down" /></a>
                         <a href="#">featured properties</a>
                     </div>
                 </div>

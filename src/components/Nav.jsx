@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+const basePath = import.meta.env.BASE_URL;
+
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -14,7 +16,7 @@ export default function Nav() {
         <Link to="/">
           <button className="nav-logo">
             <img
-              src="/images/logo-black.svg"
+              src={`${basePath}/images/logo-black.svg`}
               className="trilogy-logo"
               alt="Trilogy in all uppercase"
             />

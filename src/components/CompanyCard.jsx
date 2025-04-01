@@ -1,4 +1,5 @@
 export default function CompanyCard(props) {
+  const basePath = import.meta.env.BASE_URL;
     return (
       <div className="card" onClick={props.onClick}>
         <button className="modal-btn"></button>
@@ -13,7 +14,7 @@ export default function CompanyCard(props) {
           </div>
           <div className="p-btn-container">
             <button className="plus-btn">
-              <img src="/images/p-btn-icon.svg" alt="" />
+              <img src={`${basePath}images/p-btn-icon.svg`}  alt="" />
             </button>
           </div>
         </div>

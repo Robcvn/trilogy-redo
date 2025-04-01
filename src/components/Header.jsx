@@ -1,5 +1,7 @@
 import React from "react";
 
+const basePath = import.meta.env.BASE_URL;
+
 export default function Header(){
     return(
         <div className="header-container u-container">
@@ -8,7 +10,7 @@ export default function Header(){
             <div className="h-links">
                 <a href="#" className="meet-link underline">meet trilogy</a>
                 <div className="feat-prop">
-                    <a href="#"><img src="\images\arrow-long-down.svg" className="arrow-down" alt="gold arrow pointing down" /></a>
+                    <a href="#"><img src={`${basePath}/images/arrow-long-down.svg`}  className="arrow-down" alt="gold arrow pointing down" /></a>
                     <a href="#">featured properties</a>
                 </div>
             </div>
